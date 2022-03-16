@@ -23,7 +23,7 @@ def index():
 
 
 @app.route('/scrape')
-def scrape():
+def scraper():
     conn = 'mongodb://localhost:27017'
 
     client = pymongo.MongoClient(conn)
