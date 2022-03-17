@@ -1,3 +1,16 @@
+Sumsbmission:
+
+1. Repository in github link is https://github.com/MarkusShipley/web-scraping-challenge
+2. The Jupyter Notebook containing the scraping code used is in the Mission to Mars Folder and is named scrape_mars.ipynb
+3. The Mission_to_Mars.ipnynb, App.py and Scrape_Mars.py are also in the folder.  ]
+4. The index.htm; is in the template folder.  An alternate html file named indexAlt.html is also in the folder.  However, I user the index.html for the final project.
+5. The mongodb used was named mars_db and the collection was named mars_info.
+6. Screenshots of the applications are in the images folder
+
+
+
+
+
 # Web Scraping Homework - Mission to Mars
 
 ![mission_to_mars](Images/mission_to_mars.png)
