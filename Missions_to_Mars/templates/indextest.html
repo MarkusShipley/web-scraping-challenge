@@ -47,15 +47,8 @@
         <div class="col-md-4">
           <div class="row" id="mars-facts">
             <h4>Mars Facts</h4>
-            <div>
-            <!-- <table class="table table-bordered">{{mars.mars_facts | safe }}</table>  -->
-              <ul style="list-style: none;">
-                {% for mars_fact in mars.mars_facts %}
-                  <li>{{ mars_fact.name }}: {{ mars_fact.measure }}</li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>  
+            <table class="table table-bordered">{{mars.mars_facts | safe }}</table> 
+           </div>  
         </div>
       </div> 
 
@@ -65,13 +58,14 @@
         <div class="page-header">
           <h2 class="text-center">Mars Hemispheres</h2>
         </div>
-
-        {% for hemisphere in mars.hemisphere_images %}
+        <!-- {% for Hemisphere in mars.hemisphere_images %}-->
+        {% for [hemisphere] in mars.hemisphere_images %}
         <div class="col-md-3">
           <div class="thumbnail">
-            <img src="{{ hemisphere.url }}">
+            <img src="{{ hemisphere_image }}">
             <div class="caption">
-              <h3>{{ hemisphere.name }}</h3>
+                <!--<h3>{{ hemisphere_name }}</h3>-->
+              <h3>{{ [hemisphere] }}</h3>
             </div>
           </div>
         </div>

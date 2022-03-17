@@ -59,9 +59,12 @@ def scrape():
     mars_df.columns = ['name', 'measure']
 
     mars_info_dictionary['mars_facts'] = mars_df.to_dict('records')
-
-    hemisphere_image_urls = {}
-
+    
+    
+    #PART 4
+    #hemisphere_image_urls = {}
+    hemisphere_info = []
+    
     url_4 = "https://marshemispheres.com/"
 
     browser.visit(url_4)
@@ -93,10 +96,13 @@ def scrape():
 
         hemisphere_image_url = url_4 + hemisphere_img_link
 
-        hemisphere_image_urls[hemisphere_name] = hemisphere_image_url
+        hemisphere_image_urls = {}
+        hemisphere_image_urls['name'] = hemisphere_name
+        hemisphere_image_urls['url'] = hemisphere_image_url
+        hemisphere_info.append(hemisphere_image_urls)
 
     browser.quit()    
     
-    mars_info_dictionary['hemisphere_images'] = hemisphere_image_urls
+    mars_info_dictionary['hemisphere_images'] = hemisphere_info
 
     return mars_info_dictionary
