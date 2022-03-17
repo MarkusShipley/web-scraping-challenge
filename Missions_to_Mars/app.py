@@ -19,7 +19,7 @@ def index():
     
     mars = list(db.mars_info.find())[0]
     
-    return render_template('indextest2.html', mars=mars)
+    return render_template('index.html', mars=mars)
 
 
 @app.route('/scrape')
